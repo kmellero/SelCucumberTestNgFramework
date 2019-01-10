@@ -1,0 +1,64 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Youtube Search positive scenarios",
+        "description": "",
+        "id": "youtube-search-validations;youtube-search-positive-scenarios",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13012065391,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Open chrome browser and enter url",
+            "match": {
+              "location": "YouTubeSearchStepDef.open_chrome_browser_and_enter_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1253688098,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Enter search criteria",
+            "match": {
+              "location": "YouTubeSearchStepDef.enter_search_criteria()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4039496149,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Click on search button",
+            "match": {
+              "location": "YouTubeSearchStepDef.click_on_search_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Youtube Search Validations",
+    "description": "",
+    "id": "youtube-search-validations",
+    "keyword": "Feature",
+    "uri": "YouTubeSearch.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@UATTesting"
+      }
+    ]
+  }
+]
