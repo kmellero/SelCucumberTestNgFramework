@@ -5,5 +5,5 @@
     <classes>
       <class name="com.testautomation.TestRunner.TestRunner"/>
     </classes>
-  </test> 
-</suite> 
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
