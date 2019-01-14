@@ -1,10 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.testautomation</groupId>
-  <artifactId>SelCucumberTestNgFramework</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>SelCucumberTestNgFramework</name>
-  <description>Selenium-Maven-CucumberBDD-TestNgFramework - YouTube search</description>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.testautomation</groupId>
+	<artifactId>SelCucumberTestNgFramework</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SelCucumberTestNgFramework</name>
+	<description>Selenium-Maven-CucumberBDD-TestNgFramework - YouTube search</description>
 
 	<url>http://maven.apache.org</url>
 
@@ -64,7 +66,7 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<!-- <includes> <include>MyRunner.java</include> </includes> -->
-					<skipTests>false</skipTests>  
+					<skipTests>false</skipTests>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -73,14 +75,17 @@
 				<version>4.3.0</version>
 				<executions>
 					<execution>
-						<id>execute</id>
+						<id>execution</id>
 						<phase>verify</phase>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
-							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+							<!-- <projectName>SelCucumberTestNgFramework</projectName> -->
+							<outputDirectory>target\cucumber-reports\advanced-reports</outputDirectory>
+							<cucumberOutput>target\cucumber.json</cucumberOutput>
+							<checkBuildResult>true</checkBuildResult>
+							<jsonFiles><param>**\*.json</param></jsonFiles> <!-- defaults to outputDirectory -->
 						</configuration>
 					</execution>
 				</executions>

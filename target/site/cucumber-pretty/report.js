@@ -39,21 +39,21 @@ formatter.match({
   "location": "YouTubeSearchStepDef.open_chrome_browser_and_enter_url()"
 });
 formatter.result({
-  "duration": 10945463163,
+  "duration": 13062919728,
   "status": "passed"
 });
 formatter.match({
   "location": "YouTubeSearchStepDef.enter_search_criteria()"
 });
 formatter.result({
-  "duration": 1283230208,
+  "duration": 1237731684,
   "status": "passed"
 });
 formatter.match({
   "location": "YouTubeSearchStepDef.click_on_search_button()"
 });
 formatter.result({
-  "duration": 3888342417,
+  "duration": 3967679456,
   "status": "passed"
 });
 });
