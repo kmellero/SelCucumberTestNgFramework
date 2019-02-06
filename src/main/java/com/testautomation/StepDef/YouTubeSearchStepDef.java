@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.testautomation.Utility.PropertiesFileReader;
 
@@ -20,8 +21,20 @@ public class YouTubeSearchStepDef {
     @Given("^Open chrome browser and enter url$")
     public void open_chrome_browser_and_enter_url() throws InterruptedException {
        	Properties properties = obj.getProperty();
-    	System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Selenium-ChromeDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+       	
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("disable-infobars");
+		options.setHeadless(false);  // web browser without a graphical user interface - no internet window
+
+//1 doesn't work      	String browser = properties.getProperty("browser.driver");
+//1    	System.out.println("browser.driver = " + browser);
+//1      	System.setProperty("webdriver.chrome.driver", browser);
+//2 doesn't work      	System.setProperty("webdriver.chrome.driver", new File(System.getProperty("browser.driver"), "chromedriver.exe").getAbsolutePath());
+//3 works            	System.setProperty("webdriver.chrome.driver", "C:\\Users\\kajetanmellerowicz\\WebDrivers\\Chrome\\chromedriver.exe");
+//3 diff computer			///"C:\\Program Files\\Selenium-ChromeDriver\\chromedriver.exe");
+//4 webdrivers' locations are in the environm system variable path, then it works as below
+       	
+       	driver = new ChromeDriver(options);
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
